@@ -3,7 +3,7 @@ Summary:	Converting Mbox mailboxes to Maildir format
 Summary(pl):	Konwerter skrzynek Mbox do formatu Maildir
 Name:		mb2md
 Version:	3.20
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://batleth.sapienti-sat.org/projects/mb2md/%{name}-%{version}.pl.gz
@@ -50,6 +50,8 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
 gzip -d -c %{SOURCE0} > $RPM_BUILD_ROOT%{_bindir}/mb2md.pl
+# let rpm find deps
+chmod 755 $RPM_BUILD_ROOT%{_bindir}/mb2md.pl
 
 %clean
 rm -rf $RPM_BUILD_ROOT
