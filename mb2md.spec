@@ -7,6 +7,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Text
 Source0:	http://batleth.sapienti-sat.org/projects/mb2md/%{name}-%{version}.pl
+# Source0-md5:	14714b1927e4aeff2807a5dde45aebe7
 URL:		http://batleth.sapienti-sat.org/projects/mb2md/
 BuildRequires:	perl >= 5.6.0
 BuildRequires:	rpm-perlprov
