@@ -3,14 +3,14 @@ Summary:	Converting Mbox mailboxes to Maildir format
 Summary(pl):	Konwerter skrzynek Mbox do formatu Maildir
 Name:		mb2md
 Version:	3.10
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Text
 Source0:	http://batleth.sapienti-sat.org/projects/mb2md/%{name}-%{version}.pl
 # Source0-md5:	14714b1927e4aeff2807a5dde45aebe7
 URL:		http://batleth.sapienti-sat.org/projects/mb2md/
-BuildRequires:	perl >= 5.6.0
-BuildRequires:	rpm-perlprov
+BuildRequires:	perl-devel >= 1:5.6.0
+BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
