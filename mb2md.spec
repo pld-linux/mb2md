@@ -42,7 +42,7 @@ POP3/IMAP, wiêkszo¶æ serwerów pocztowych (MTA) oraz czytników poczty
 (MUA). Format Maildir jest u¿ywany przez Qmaila, Courier-MTA i mo¿e
 byæ u¿ywany jako alternatywny format tak¿e przez Postfiksa i Exima.
 Dobrym serwerem POP3/IMAP dla skrzynek Maildir jest Courier IMAP.
- 
+
 %prep
 
 %install
