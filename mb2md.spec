@@ -2,12 +2,12 @@
 Summary:	Converting Mbox mailboxes to Maildir format
 Summary(pl):	Konwerter skrzynek Mbox do formatu Maildir
 Name:		mb2md
-Version:	3.10
-Release:	2
+Version:	3.20
+Release:	1
 License:	GPL
 Group:		Applications/Text
-Source0:	http://batleth.sapienti-sat.org/projects/mb2md/%{name}-%{version}.pl
-# Source0-md5:	14714b1927e4aeff2807a5dde45aebe7
+Source0:	http://batleth.sapienti-sat.org/projects/mb2md/%{name}-%{version}.pl.gz
+# Source0-md5:	b47eaa6ae4231a42f4a15564a08eb439
 URL:		http://batleth.sapienti-sat.org/projects/mb2md/
 BuildRequires:	perl-devel >= 1:5.6.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -47,7 +47,9 @@ Dobrym serwerem POP3/IMAP dla skrzynek Maildir jest Courier IMAP.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D %{SOURCE0} $RPM_BUILD_ROOT%{_bindir}/mb2md.pl
+install -d $RPM_BUILD_ROOT%{_bindir}
+
+gzip -d -c %{SOURCE0} > $RPM_BUILD_ROOT%{_bindir}/mb2md.pl
 
 %clean
 rm -rf $RPM_BUILD_ROOT
