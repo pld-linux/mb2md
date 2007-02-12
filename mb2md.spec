@@ -1,6 +1,6 @@
 %include        /usr/lib/rpm/macros.perl
 Summary:	Converting Mbox mailboxes to Maildir format
-Summary(pl):	Konwerter skrzynek Mbox do formatu Maildir
+Summary(pl.UTF-8):   Konwerter skrzynek Mbox do formatu Maildir
 Name:		mb2md
 Version:	3.20
 Release:	2
@@ -28,19 +28,19 @@ the POP3/IMAP servers, most mail servers (MTAs) and mail readers
 also used as a alternative mail storage format by Postfix and Exim. A
 good POP3/IMAP server for Maildirs is Courier IMAP.
 
-%description -l pl
-mb2md to skrypt Perla, który bierze jeden lub wiêcej plików skrzynek w
-formacie Mbox z katalogu i konwertuje je do formatu Maildir. Poniewa¿
+%description -l pl.UTF-8
+mb2md to skrypt Perla, ktÃ³ry bierze jeden lub wiÄ™cej plikÃ³w skrzynek w
+formacie Mbox z katalogu i konwertuje je do formatu Maildir. PoniewaÅ¼
 format Mbox ma pewne wady, D. J. Bernstein przy pisaniu Qmaila
-stworzy³ format Maildir. W formacie Mbox wszystkie wiadomo¶ci w danym
-folderze s± zapisywane w jednym du¿ym pliku tekstowym. W formacie
-Maildir ka¿da wiadomo¶æ jest zapisywana jako oddzielny plik. Maildir
-jest szybszym i bardziej wydajnym sposobem zapisywania poczty. Dzia³a
-szczególnie dobrze po NFS, maj±cym d³ug± historiê problemów zwi±zanych
-z blokowaniem plików. Format Mbox jest u¿ywany przez czê¶æ serwerów
-POP3/IMAP, wiêkszo¶æ serwerów pocztowych (MTA) oraz czytników poczty
-(MUA). Format Maildir jest u¿ywany przez Qmaila, Courier-MTA i mo¿e
-byæ u¿ywany jako alternatywny format tak¿e przez Postfiksa i Exima.
+stworzyÅ‚ format Maildir. W formacie Mbox wszystkie wiadomoÅ›ci w danym
+folderze sÄ… zapisywane w jednym duÅ¼ym pliku tekstowym. W formacie
+Maildir kaÅ¼da wiadomoÅ›Ä‡ jest zapisywana jako oddzielny plik. Maildir
+jest szybszym i bardziej wydajnym sposobem zapisywania poczty. DziaÅ‚a
+szczegÃ³lnie dobrze po NFS, majÄ…cym dÅ‚ugÄ… historiÄ™ problemÃ³w zwiÄ…zanych
+z blokowaniem plikÃ³w. Format Mbox jest uÅ¼ywany przez czÄ™Å›Ä‡ serwerÃ³w
+POP3/IMAP, wiÄ™kszoÅ›Ä‡ serwerÃ³w pocztowych (MTA) oraz czytnikÃ³w poczty
+(MUA). Format Maildir jest uÅ¼ywany przez Qmaila, Courier-MTA i moÅ¼e
+byÄ‡ uÅ¼ywany jako alternatywny format takÅ¼e przez Postfiksa i Exima.
 Dobrym serwerem POP3/IMAP dla skrzynek Maildir jest Courier IMAP.
 
 %prep
