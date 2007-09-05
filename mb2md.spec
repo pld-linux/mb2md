@@ -3,7 +3,7 @@ Summary:	Converting Mbox mailboxes to Maildir format
 Summary(pl.UTF-8):	Konwerter skrzynek Mbox do formatu Maildir
 Name:		mb2md
 Version:	3.20
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Text
 Source0:	http://batleth.sapienti-sat.org/projects/mb2md/%{name}-%{version}.pl.gz
