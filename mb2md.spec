@@ -1,4 +1,3 @@
-%include        /usr/lib/rpm/macros.perl
 Summary:	Converting Mbox mailboxes to Maildir format
 Summary(pl.UTF-8):	Konwerter skrzynek Mbox do formatu Maildir
 Name:		mb2md
