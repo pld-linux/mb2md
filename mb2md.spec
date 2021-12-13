@@ -2,11 +2,13 @@ Summary:	Converting Mbox mailboxes to Maildir format
 Summary(pl.UTF-8):	Konwerter skrzynek Mbox do formatu Maildir
 Name:		mb2md
 Version:	3.20
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/Text
 Source0:	http://batleth.sapienti-sat.org/projects/mb2md/%{name}-%{version}.pl.gz
 # Source0-md5:	b47eaa6ae4231a42f4a15564a08eb439
+Source1:	https://ftp.debian.org:/debian/pool/main/m/mb2md/%{name}_%{version}-9.debian.tar.xz
+# Source1-md5:	95187fd0db625876732bbe2b9a57533e
 URL:		http://batleth.sapienti-sat.org/projects/mb2md/
 BuildRequires:	perl-devel >= 1:5.6.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -43,12 +45,22 @@ być używany jako alternatywny format także przez Postfiksa i Exima.
 Dobrym serwerem POP3/IMAP dla skrzynek Maildir jest Courier IMAP.
 
 %prep
+%setup -q -c -T -a1
+
+%build
+cp %{SOURCE0} .
+gzip -d -c %{SOURCE0} > %{name}-%{version}.pl
+
+for p in `cat debian/patches/series`; do
+	patch -p1 < debian/patches/$p || exit 1
+done
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_bindir}
 
-gzip -d -c %{SOURCE0} > $RPM_BUILD_ROOT%{_bindir}/mb2md.pl
+cp -a %{name}-%{version}.pl $RPM_BUILD_ROOT%{_bindir}/mb2md.pl
+
 # let rpm find deps
 chmod 755 $RPM_BUILD_ROOT%{_bindir}/mb2md.pl
 
